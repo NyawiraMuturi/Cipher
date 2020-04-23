@@ -6,13 +6,13 @@ public class App {
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Welcome to Code Cipher!");
+        System.out.println("Are you ready to get your messages Encrypted or decrypted?");
         for( ;; ) {
             System.out.println("choice\n 1.Encrypt\n 2.Decrypt\n3.Exit");
             int choice = sc.nextInt();
             Cipher caeser = new Cipher();
             if (choice == 1) {
-                System.out.println("Enter the String for Encryption: ");
+                System.out.println("Enter message for Encryption: ");
                 String message = new String();
                 message = sc.next();
                 System.out.println("Enter Key");
@@ -20,7 +20,7 @@ public class App {
                 System.out.println(caeser.encrypt(message, shiftKey));
 
             } else if (choice == 2) {
-                System.out.println("Enter the String for Decryption: ");
+                System.out.println("Enter message for Decryption: ");
                 String message = new String();
                 message = sc.next();
                 System.out.println("Enter Key");
